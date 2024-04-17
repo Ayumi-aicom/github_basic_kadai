@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class Dictionary_Chapter21{
 	
 //	検索したい文字列を引数に指定している
-	public static void dictionary(String[] words){
+	public  void dictionary(String[] words){
 		HashMap<String,String>dictionary = new HashMap<String,String>();
 		
 	 
@@ -23,12 +23,13 @@ public class Dictionary_Chapter21{
 		dictionary.put("cherry","さくらんぼ");
 		
 		
+//		containskeyを使うとforを使わなくても記述可能。
 		for(String word:words) {
 			
 			String mean = dictionary.get(word);
 		
 			if(mean==null) {
-				System.out.println("辞書にデータが存在しません");
+				System.out.println(word+"のデータが存在しません");
 			}else {
 				System.out.println(word+"の意味は"+mean);
 			}
